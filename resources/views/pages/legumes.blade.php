@@ -11,9 +11,11 @@
     </thead>
     <tbody>
         @foreach ($dataLeg as $item )
-    <tr>
+        <tr>
         <th scope="row">{{$item->id}}</th>
-        <td>{{$item->nom}}</td>
+        @if (strlen($item->nom) >= 5)
+        <td class="bg-primary">{{$item->nom}}</td>
+        @endif
         <td>{{$item->quantite}}</td>
     </tr>
       @endforeach
