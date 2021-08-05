@@ -15,6 +15,11 @@
         <th scope="row">{{$item->id}}</th>
         <td>{{$item->nom}}</td>
         <td>{{$item->quantite}}</td>
+        <td>
+        <a href="{{route('showfruit', $item->id)}}">
+        <button type="button" class="btn btn-primary">SHOW</button>
+        </a>
+        </td>
       </tr>
       @endforeach
 

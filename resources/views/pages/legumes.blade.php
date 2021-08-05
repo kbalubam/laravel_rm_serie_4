@@ -17,6 +17,14 @@
         <td class="bg-primary">{{$item->nom}}</td>
         @endif
         <td>{{$item->quantite}}</td>
+       
+       
+        <td>
+        <a href="{{route('showleg', $item->id)}}">
+        <button type="button" class="btn btn-primary">SHOW</button>
+        </a>
+        </td>
+
     </tr>
       @endforeach
     </tbody>

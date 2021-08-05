@@ -11,4 +11,9 @@ class LegumesController extends Controller
         $dataLeg = Legume::all();
         return view('pages.legumes', compact('dataLeg'));
     }
+
+    public function show(Legume $id){
+        $legume = $id;
+        return view('pages.showLegumes', compact('legume'));
+    }
 }
